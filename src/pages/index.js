@@ -1,4 +1,5 @@
 import { Heading } from "@chakra-ui/layout"
+import { useState } from "react"
 import styled from "styled-components"
 import Add from "../commnon/components/Add"
 import List from "../commnon/components/List"
@@ -23,15 +24,32 @@ const Right = styled.div`
 `
 
 export default function Home() {
+  const [itens, setItens] = useState([]);
+
+  const onPlus = (value) => {
+    setItens([
+      ...itens,
+      {
+        value
+      }
+    ])
+  }
+
+  console.log(itens)
+
   return (
     <Container>
-      <Heading>I'm a Heading</Heading>
+      <Heading>LISTA DE COMPRAS</Heading>
 
       <Content>
 
         <Left>
-          <Add />
-          <List />
+          <Add
+            onPlus={onPlus}
+          />
+          <List
+            itens={itens}
+          />
 
         </Left>
 

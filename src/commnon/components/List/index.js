@@ -2,17 +2,17 @@ import ItemList from "../ItemList";
 
 const { Container } = require("./styles");
 
-function List() {
-
+function List(props) {
+    const { itens } = props;
     return (
         <Container>
-            <ItemList />
-            <ItemList />
-            <ItemList />
-            <ItemList />
-            <ItemList />
-            <ItemList />
-            
+            {
+                itens.map(item => {
+                    return (
+                        <ItemList value={item.value} />
+                    )
+                })
+            }
         </Container>
     )
 }
