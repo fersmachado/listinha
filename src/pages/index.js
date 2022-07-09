@@ -6,7 +6,8 @@ import List from "../commnon/components/List"
 
 const Container = styled.div`
   padding: 32px;
-  background: #E7EAF9;
+  background: #b087c100;
+  color: black;
 `
 
 const Content = styled.div`
@@ -35,7 +36,8 @@ export default function Home() {
     ])
   }
 
-  console.log(itens)
+
+ 
 
   return (
     <Container>
@@ -49,6 +51,7 @@ export default function Home() {
           />
           <List
             itens={itens}
+
           />
 
         </Left>

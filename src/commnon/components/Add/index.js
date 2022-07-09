@@ -15,7 +15,7 @@ function Add(props) {
 
     return (
         <Container>
-            <Input placeholder="Adicione novo item" variant="filled" id="inputAdd" />
+            <Input placeholder="Adicione novo item..." variant="filled" id="inputAdd"/>
             <IconButton
                 style={{ borderRadius: 20, background: "#7E6EE1", color: "#ffff" }}
                 icon={icon}

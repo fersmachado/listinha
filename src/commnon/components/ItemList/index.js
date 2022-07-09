@@ -10,7 +10,7 @@ function ItemList(props) {
     return (
         <Container>
             <ContentCheck>
-                <Checkbox defaultChecked />
+                <Checkbox disabledRipple />
                 {value}
             </ContentCheck>
             <ContentIcon>
