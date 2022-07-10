@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.li`
-        justify-content: space-between;
-        display: flex;
-        border-top: 1px;
-        padding: 8px;
-        border-bottom: 1px solid black;
+       justify-content: space-between;
+       display: flex;
+       border-top: 1px;
+       padding: 8px;
+       border-bottom: 1px solid black;
    
 `
 

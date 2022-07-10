@@ -2,6 +2,7 @@ import { Heading } from "@chakra-ui/layout"
 import { useState } from "react"
 import styled from "styled-components"
 import Add from "../commnon/components/Add"
+import Completed from "../commnon/components/Completed"
 import List from "../commnon/components/List"
 
 const Container = styled.div`
@@ -17,11 +18,11 @@ const Content = styled.div`
 `
 
 const Left = styled.div`
-  flex: 1;
+  flex: 2;
 `
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
 `
 
 export default function Home() {
@@ -57,7 +58,7 @@ export default function Home() {
         </Left>
 
         <Right>
-          dada
+          <Completed />
         </Right>
 
       </Content>
