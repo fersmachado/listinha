@@ -14,7 +14,7 @@ function ItemList(props) {
                 {value}
             </ContentCheck>
             <ContentIcon>
-                <FontAwesomeIcon icon={faPen} />
+                <FontAwesomeIcon icon={faPen} onClick={function() { console.log('click'); }} />
                 <FontAwesomeIcon icon={faTrash} />
             </ContentIcon>
         </Container>
