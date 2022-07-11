@@ -2,16 +2,13 @@ import { IconButton } from "@chakra-ui/button";
 import { Input } from "@chakra-ui/input";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useToast } from '@chakra-ui/react'
+
 
 const { Container } = require("./styles");
 
 function Add(props) {
     const { onPlus } = props;
     const icon = <FontAwesomeIcon icon={faPlus} />;
-    const toast = useToast();
-
-
 
     return (
         <Container>
@@ -24,15 +21,6 @@ function Add(props) {
                     let value = elem.value;
                     onPlus(value);
                     elem.value = ""
-
-                    toast({
-                        title: `Adicionado: (${value})`,
-                        status: 'success',
-                        duration: 9000,
-                        isClosable: true,
-                    })
-
-                    
                 }}
             />
         </Container>

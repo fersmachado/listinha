@@ -6,16 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const { Container, ContentCheck, ContentIcon } = require("./styles");
 
 function ItemList(props) {
-    const { value } = props;
+    const { value, id, onEdit, onRemove, onCheck, check } = props;
     return (
         <Container>
             <ContentCheck>
-                <Checkbox disabledRipple />
+                <Checkbox isChecked={check} onChange={() => onCheck(id)} />
                 {value}
             </ContentCheck>
             <ContentIcon>
-                <FontAwesomeIcon icon={faPen} onClick={function() { console.log('click'); }} />
-                <FontAwesomeIcon icon={faTrash} />
+                {check == false ? <FontAwesomeIcon icon={faPen} onClick={() => onEdit(id)} /> : null}
+                <FontAwesomeIcon icon={faTrash} onClick={() => onRemove(id)} />
             </ContentIcon>
         </Container>
 
